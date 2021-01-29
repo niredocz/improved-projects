@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Sistem E-Ticket - Ticketarena</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+        <meta content="Coderthemes" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="images/favicon.ico">
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+        <!--Material Icon -->
+        <link rel="stylesheet" type="text/css" href="css/materialdesignicons.min.css" />
+        <!-- Custom  sCss -->
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    </head>
+
+    <body>
+
+        <!--Navbar Start-->
+        <nav class="navbar navbar-expand-lg fixed-top navbar-custom sticky sticky-dark">
+            <div class="container-fluid">
+                <!-- LOGO -->
+                <a class="logo text-uppercase" href="index-2.html">
+                    <!-- <img src="images/logo-light.png" alt="" class="logo-light" height="18" />
+                    <img src="images/logo-dark.png" alt="" class="logo-dark" height="18" /> -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="logo-light" width="130" viewBox="0 0 608 130"><g fill="none" fill-rule="evenodd"><rect width="607.967" height="130.291"></rect><polygon fill="#FFF" fill-rule="nonzero" points="112.86 46.658 55.462 52.821 83.105 57.399 77.823 91.028 77.823 91.38 71.836 129.411 34.862 125.361 30.812 55.462 2.993 58.455 0 .88 117.966 13.557"></polygon><g fill="#FFF" fill-rule="nonzero" transform="translate(147.137 31.692)"><path d="M12.9094726 5.10600892L.584623458 6.86670165.584623458 57.0464445C.584623458 68.1388087 7.09918657 69.8995014 15.7265809 69.8995014L22.9454211 69.8995014 22.9454211 58.9832065 17.8394122 58.9832065C13.7898189 58.9832065 12.7334033 57.7507216 12.7334033 54.2293361L12.7334033 32.0446077 22.9454211 32.0446077 22.9454211 21.1283128 12.7334033 21.1283128 12.7334033 5.10600892 12.9094726 5.10600892zM194.260824 44.8976647C194.260824 29.2274993 185.45736 19.8958279 172.076096 19.8958279 158.342692 19.8958279 148.658882 29.9317764 148.658882 45.778011 148.658882 62.6806612 158.166623 71.3080556 172.076096 71.3080556 182.816321 71.3080556 190.563369 64.2652847 192.6762 55.9900289L180.879559 54.2293361C179.471005 58.1028601 177.006035 60.3917607 171.900026 60.3917607 165.561532 60.3917607 161.688008 56.8703752 160.983731 49.4754658L194.084755 49.4754658C194.084755 47.8908423 194.260824 46.4822881 194.260824 44.8976647zM161.33587 39.6155865C162.744424 33.1010234 166.794017 30.8121228 171.723957 30.8121228 177.358174 30.8121228 180.70349 33.8053004 181.759906 39.6155865L161.33587 39.6155865zM358.181317 44.8976647C358.181317 29.2274993 349.377854 19.8958279 335.996589 19.8958279 322.263186 19.8958279 312.579375 29.9317764 312.579375 45.778011 312.579375 62.6806612 322.087116 71.3080556 335.996589 71.3080556 346.736814 71.3080556 354.483863 64.2652847 356.596694 55.9900289L344.800052 54.2293361C343.391498 58.1028601 340.926528 60.3917607 335.82052 60.3917607 329.482026 60.3917607 325.608502 56.8703752 324.904225 49.4754658L358.005248 49.4754658C358.005248 47.8908423 358.181317 46.4822881 358.181317 44.8976647zM325.256363 39.6155865C326.664917 33.1010234 330.714511 30.8121228 335.64445 30.8121228 341.278667 30.8121228 344.623983 33.8053004 345.680399 39.6155865L325.256363 39.6155865z"></path><rect width="12.325" height="48.771" x="30.692" y="21.128"></rect><path d="M223.136185,32.0446077 L223.136185,21.1283128 L212.924167,21.1283128 L212.924167,5.10600892 L200.599318,6.86670165 L200.599318,57.0464445 C200.599318,68.1388087 207.113881,69.8995014 215.741275,69.8995014 L222.960115,69.8995014 L222.960115,58.9832065 L217.854107,58.9832065 C213.804513,58.9832065 212.748098,57.7507216 212.748098,54.2293361 L212.748098,32.0446077 L223.136185,32.0446077 Z"></path><polygon points="146.898 21.128 131.58 21.128 114.501 37.503 114.501 5.106 102.353 6.691 102.353 69.723 114.501 69.723 114.501 52.997 119.255 48.243 134.045 69.723 149.187 69.723 128.059 39.616"></polygon><path d="M74.0055104 31.1642613C79.8157964 31.1642613 82.6329047 34.8617161 83.6893204 39.4395172L95.662031 37.6788245C94.4295461 26.9385988 85.9782209 19.7197586 74.3576489 19.7197586 59.3917607 19.7197586 50.9404356 30.9881921 50.9404356 45.778011 50.9404356 60.7438992 59.2156914 71.1319864 74.0055104 71.1319864 86.5064288 71.1319864 93.9013382 64.2652847 95.8381002 53.3489898L83.8653897 51.588297C82.9850433 56.5182367 79.9918657 59.5114143 74.0055104 59.5114143 66.2584623 59.5114143 63.2652847 53.1729205 63.2652847 45.4258725 62.9131462 38.030963 66.2584623 31.1642613 74.0055104 31.1642613zM37.030963.880346366C32.8053004.880346366 29.4599843 4.22566256 29.4599843 8.45132511 29.4599843 12.6769877 32.8053004 16.0223039 37.030963 16.0223039 41.2566256 16.0223039 44.6019417 12.6769877 44.6019417 8.45132511 44.6019417 4.22566256 41.2566256.880346366 37.030963.880346366zM274.196274 59.8635529C272.259512 59.8635529 271.379166 58.8071372 271.379166 56.8703752L271.379166 38.3831015C271.379166 23.5932826 262.223563 19.8958279 251.307268 19.8958279 240.919181 19.8958279 231.939648 24.6496982 231.059302 34.157439L242.855943 35.7420625 243.032013 35.7420625C243.032013 32.220677 245.849121 30.4599843 251.131199 30.4599843 256.941485 30.4599843 259.054316 32.5728155 259.054316 35.3899239 259.054316 38.030963 257.997901 38.9113094 253.948308 39.4395172L245.849121 41.0241406C235.637103 42.9609027 229.298609 47.5387038 229.298609 56.694306 229.298609 65.8499082 236.34138 70.9559171 244.616636 70.9559171 251.131199 70.9559171 256.589347 68.6670165 259.934663 63.2088691L259.934663 63.7370769C259.934663 67.6106009 262.223563 69.7234322 265.921018 69.7234322L275.25269 69.7234322 275.25269 59.8635529 274.196274 59.8635529zM259.230386 49.4754658C259.230386 55.8139596 254.652585 61.2721071 248.138022 61.2721071 244.264498 61.2721071 241.975597 59.3353451 241.975597 55.9900289 241.975597 52.4686434 244.616636 50.8840199 249.370506 49.8276043L256.413277 48.2429808C257.469693 48.0669116 258.702178 47.714773 259.406455 47.1865652L259.406455 49.4754658 259.230386 49.4754658zM365.048019 23.0650748L376.668591 21.3043821 376.668591 26.5864602C379.133561 22.1847284 384.943847 19.8958279 390.225925 19.8958279 401.14222 19.8958279 408.184991 27.1146681 408.184991 39.6155865L408.184991 69.7234322 396.036211 69.7234322 396.21228 42.6087641C396.21228 35.9181317 392.690895 31.6924692 387.056678 31.6924692 380.718184 31.6924692 377.372868 36.7984781 377.372868 43.6651797L377.372868 69.7234322 365.224088 69.7234322 365.224088 23.0650748 365.048019 23.0650748zM459.773288 59.8635529C457.836526 59.8635529 456.956179 58.8071372 456.956179 56.8703752L456.956179 38.3831015C456.956179 23.5932826 447.800577 19.8958279 436.884282 19.8958279 426.496195 19.8958279 417.516662 24.6496982 416.636316 34.157439L428.432957 35.7420625 428.609027 35.7420625C428.609027 32.220677 431.426135 30.4599843 436.708213 30.4599843 442.518499 30.4599843 444.63133 32.5728155 444.63133 35.3899239 444.63133 38.030963 443.574915 38.9113094 439.525321 39.4395172L431.426135 41.0241406C421.214117 42.9609027 414.875623 47.5387038 414.875623 56.694306 414.875623 65.8499082 421.918394 70.9559171 430.19365 70.9559171 436.708213 70.9559171 442.166361 68.6670165 445.511677 63.2088691L445.511677 63.7370769C445.511677 67.6106009 447.800577 69.7234322 451.498032 69.7234322L460.829703 69.7234322 460.829703 59.8635529 459.773288 59.8635529zM444.63133 49.4754658C444.63133 55.8139596 440.053529 61.2721071 433.538966 61.2721071 429.665442 61.2721071 427.376542 59.3353451 427.376542 55.9900289 427.376542 52.4686434 430.017581 50.8840199 434.771451 49.8276043L441.814222 48.2429808C442.870638 48.0669116 444.103123 47.714773 444.8074 47.1865652L444.8074 49.4754658 444.63133 49.4754658zM282.295461 23.0650748L293.916033 21.3043821 293.916033 27.1146681C296.733141 22.0086591 302.015219 20.7761742 306.59302 20.7761742L311.170821 20.7761742 310.994752 32.3967463 305.712674 32.3967463C298.317764 32.3967463 294.44424 37.5027552 294.44424 44.8976647L294.44424 69.8995014 282.295461 69.8995014 282.295461 23.0650748 282.295461 23.0650748z"></path></g></g></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="logo-dark" width="130" viewBox="0 0 608 130"><g fill="none" fill-rule="evenodd"><rect width="607.967" height="130.291"></rect><polygon fill="#34495e" fill-rule="nonzero" points="112.86 46.658 55.462 52.821 83.105 57.399 77.823 91.028 77.823 91.38 71.836 129.411 34.862 125.361 30.812 55.462 2.993 58.455 0 .88 117.966 13.557"></polygon><g fill="#34495e" fill-rule="nonzero" transform="translate(147.137 31.692)"><path d="M12.9094726 5.10600892L.584623458 6.86670165.584623458 57.0464445C.584623458 68.1388087 7.09918657 69.8995014 15.7265809 69.8995014L22.9454211 69.8995014 22.9454211 58.9832065 17.8394122 58.9832065C13.7898189 58.9832065 12.7334033 57.7507216 12.7334033 54.2293361L12.7334033 32.0446077 22.9454211 32.0446077 22.9454211 21.1283128 12.7334033 21.1283128 12.7334033 5.10600892 12.9094726 5.10600892zM194.260824 44.8976647C194.260824 29.2274993 185.45736 19.8958279 172.076096 19.8958279 158.342692 19.8958279 148.658882 29.9317764 148.658882 45.778011 148.658882 62.6806612 158.166623 71.3080556 172.076096 71.3080556 182.816321 71.3080556 190.563369 64.2652847 192.6762 55.9900289L180.879559 54.2293361C179.471005 58.1028601 177.006035 60.3917607 171.900026 60.3917607 165.561532 60.3917607 161.688008 56.8703752 160.983731 49.4754658L194.084755 49.4754658C194.084755 47.8908423 194.260824 46.4822881 194.260824 44.8976647zM161.33587 39.6155865C162.744424 33.1010234 166.794017 30.8121228 171.723957 30.8121228 177.358174 30.8121228 180.70349 33.8053004 181.759906 39.6155865L161.33587 39.6155865zM358.181317 44.8976647C358.181317 29.2274993 349.377854 19.8958279 335.996589 19.8958279 322.263186 19.8958279 312.579375 29.9317764 312.579375 45.778011 312.579375 62.6806612 322.087116 71.3080556 335.996589 71.3080556 346.736814 71.3080556 354.483863 64.2652847 356.596694 55.9900289L344.800052 54.2293361C343.391498 58.1028601 340.926528 60.3917607 335.82052 60.3917607 329.482026 60.3917607 325.608502 56.8703752 324.904225 49.4754658L358.005248 49.4754658C358.005248 47.8908423 358.181317 46.4822881 358.181317 44.8976647zM325.256363 39.6155865C326.664917 33.1010234 330.714511 30.8121228 335.64445 30.8121228 341.278667 30.8121228 344.623983 33.8053004 345.680399 39.6155865L325.256363 39.6155865z"></path><rect width="12.325" height="48.771" x="30.692" y="21.128"></rect><path d="M223.136185,32.0446077 L223.136185,21.1283128 L212.924167,21.1283128 L212.924167,5.10600892 L200.599318,6.86670165 L200.599318,57.0464445 C200.599318,68.1388087 207.113881,69.8995014 215.741275,69.8995014 L222.960115,69.8995014 L222.960115,58.9832065 L217.854107,58.9832065 C213.804513,58.9832065 212.748098,57.7507216 212.748098,54.2293361 L212.748098,32.0446077 L223.136185,32.0446077 Z"></path><polygon points="146.898 21.128 131.58 21.128 114.501 37.503 114.501 5.106 102.353 6.691 102.353 69.723 114.501 69.723 114.501 52.997 119.255 48.243 134.045 69.723 149.187 69.723 128.059 39.616"></polygon><path d="M74.0055104 31.1642613C79.8157964 31.1642613 82.6329047 34.8617161 83.6893204 39.4395172L95.662031 37.6788245C94.4295461 26.9385988 85.9782209 19.7197586 74.3576489 19.7197586 59.3917607 19.7197586 50.9404356 30.9881921 50.9404356 45.778011 50.9404356 60.7438992 59.2156914 71.1319864 74.0055104 71.1319864 86.5064288 71.1319864 93.9013382 64.2652847 95.8381002 53.3489898L83.8653897 51.588297C82.9850433 56.5182367 79.9918657 59.5114143 74.0055104 59.5114143 66.2584623 59.5114143 63.2652847 53.1729205 63.2652847 45.4258725 62.9131462 38.030963 66.2584623 31.1642613 74.0055104 31.1642613zM37.030963.880346366C32.8053004.880346366 29.4599843 4.22566256 29.4599843 8.45132511 29.4599843 12.6769877 32.8053004 16.0223039 37.030963 16.0223039 41.2566256 16.0223039 44.6019417 12.6769877 44.6019417 8.45132511 44.6019417 4.22566256 41.2566256.880346366 37.030963.880346366zM274.196274 59.8635529C272.259512 59.8635529 271.379166 58.8071372 271.379166 56.8703752L271.379166 38.3831015C271.379166 23.5932826 262.223563 19.8958279 251.307268 19.8958279 240.919181 19.8958279 231.939648 24.6496982 231.059302 34.157439L242.855943 35.7420625 243.032013 35.7420625C243.032013 32.220677 245.849121 30.4599843 251.131199 30.4599843 256.941485 30.4599843 259.054316 32.5728155 259.054316 35.3899239 259.054316 38.030963 257.997901 38.9113094 253.948308 39.4395172L245.849121 41.0241406C235.637103 42.9609027 229.298609 47.5387038 229.298609 56.694306 229.298609 65.8499082 236.34138 70.9559171 244.616636 70.9559171 251.131199 70.9559171 256.589347 68.6670165 259.934663 63.2088691L259.934663 63.7370769C259.934663 67.6106009 262.223563 69.7234322 265.921018 69.7234322L275.25269 69.7234322 275.25269 59.8635529 274.196274 59.8635529zM259.230386 49.4754658C259.230386 55.8139596 254.652585 61.2721071 248.138022 61.2721071 244.264498 61.2721071 241.975597 59.3353451 241.975597 55.9900289 241.975597 52.4686434 244.616636 50.8840199 249.370506 49.8276043L256.413277 48.2429808C257.469693 48.0669116 258.702178 47.714773 259.406455 47.1865652L259.406455 49.4754658 259.230386 49.4754658zM365.048019 23.0650748L376.668591 21.3043821 376.668591 26.5864602C379.133561 22.1847284 384.943847 19.8958279 390.225925 19.8958279 401.14222 19.8958279 408.184991 27.1146681 408.184991 39.6155865L408.184991 69.7234322 396.036211 69.7234322 396.21228 42.6087641C396.21228 35.9181317 392.690895 31.6924692 387.056678 31.6924692 380.718184 31.6924692 377.372868 36.7984781 377.372868 43.6651797L377.372868 69.7234322 365.224088 69.7234322 365.224088 23.0650748 365.048019 23.0650748zM459.773288 59.8635529C457.836526 59.8635529 456.956179 58.8071372 456.956179 56.8703752L456.956179 38.3831015C456.956179 23.5932826 447.800577 19.8958279 436.884282 19.8958279 426.496195 19.8958279 417.516662 24.6496982 416.636316 34.157439L428.432957 35.7420625 428.609027 35.7420625C428.609027 32.220677 431.426135 30.4599843 436.708213 30.4599843 442.518499 30.4599843 444.63133 32.5728155 444.63133 35.3899239 444.63133 38.030963 443.574915 38.9113094 439.525321 39.4395172L431.426135 41.0241406C421.214117 42.9609027 414.875623 47.5387038 414.875623 56.694306 414.875623 65.8499082 421.918394 70.9559171 430.19365 70.9559171 436.708213 70.9559171 442.166361 68.6670165 445.511677 63.2088691L445.511677 63.7370769C445.511677 67.6106009 447.800577 69.7234322 451.498032 69.7234322L460.829703 69.7234322 460.829703 59.8635529 459.773288 59.8635529zM444.63133 49.4754658C444.63133 55.8139596 440.053529 61.2721071 433.538966 61.2721071 429.665442 61.2721071 427.376542 59.3353451 427.376542 55.9900289 427.376542 52.4686434 430.017581 50.8840199 434.771451 49.8276043L441.814222 48.2429808C442.870638 48.0669116 444.103123 47.714773 444.8074 47.1865652L444.8074 49.4754658 444.63133 49.4754658zM282.295461 23.0650748L293.916033 21.3043821 293.916033 27.1146681C296.733141 22.0086591 302.015219 20.7761742 306.59302 20.7761742L311.170821 20.7761742 310.994752 32.3967463 305.712674 32.3967463C298.317764 32.3967463 294.44424 37.5027552 294.44424 44.8976647L294.44424 69.8995014 282.295461 69.8995014 282.295461 23.0650748 282.295461 23.0650748z"></path></g></g></svg>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="mdi mdi-menu"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mx-auto navbar-center" id="mySidenav">
+                        <li class="nav-item active">
+                            <a href="#home" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#features" class="nav-link">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#demo" class="nav-link">Demos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#pricing" class="nav-link">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#faq" class="nav-link">Faqs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#clients" class="nav-link">Clients</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#contact" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                    <button class="btn btn-info navbar-btn">Try for Free</button>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+
+        <!-- home start -->
+        <section class="bg-home bg-gradient" id="home">
+            <div class="home-center">
+                <div class="home-desc-center">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="home-title mo-mb-20">
+                                    <h1 class="mb-4 text-white">Ubold is a fully featured premium admin template</h1>
+                                    <p class="text-white-50 home-desc mb-5">Ubold is a fully featured premium admin template built on top of awesome Bootstrap 4.1.3, modern web technology HTML5, CSS3 and jQuery. It has many ready to use hand crafted components. </p>
+                                    <div class="subscribe">
+                                        <form>
+                                            <div class="row">
+                                                <div class="col-md-8">
+                                                    <div class="mb-2">
+                                                        <input type="text" class="form-control" placeholder="Enter your e-mail address">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <button type="submit" class="btn btn-primary">Subscribe Us</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 offset-xl-2 col-lg-5 offset-lg-1 col-md-7">
+                                <div class="home-img position-relative">
+                                    <img src="images/home-img.png" alt="" class="home-first-img">
+                                    <img src="images/home-img.png" alt="" class="home-second-img mx-auto d-block">
+                                    <img src="images/home-img.png" alt="" class="home-third-img">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+                    </div>
+                    <!-- end container-fluid -->
+                </div>
+            </div>
+        </section>
+        <!-- home end -->
+
+        <!-- clients start -->
+        <section>
+            <div class="container-fluid">
+                <div class="clients p-4 bg-white">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="client-images">
+                                <img src="images/clients/1.png" alt="logo-img" class="mx-auto img-fluid d-block">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="client-images">
+                                <img src="images/clients/3.png" alt="logo-img" class="mx-auto img-fluid d-block">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="client-images">
+                                <img src="images/clients/4.png" alt="logo-img" class="mx-auto img-fluid d-block">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="client-images">
+                                <img src="images/clients/6.png" alt="logo-img" class="mx-auto img-fluid d-block">
+                            </div>
+                        </div>
+                    </div> <!-- end row -->
+                </div>
+            </div> <!-- end container-fluid -->
+        </section>
+        <!-- clients end -->
+
+        <!-- features start -->
+        <section class="section-sm" id="features">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="text-center mb-4 pb-1">
+                            <h3 class="mb-3">The admin is fully responsive and easy to customize</h3>
+                            <p class="text-muted">The clean and well commented code allows easy customization of the theme.It's designed for describing your app, agency or business.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end row -->
+
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="features-box">
+                            <div class="features-img mb-4">
+                                <img src="images/icons/layers.png" alt="">
+                            </div>
+                            <h4 class="mb-2">Responsive Layouts</h4>
+                            <p class="text-muted">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit</p>
+                        </div>
+                    </div>
+                    <!-- end col -->
+                    <div class="col-lg-4">
+                        <div class="features-box">
+                            <div class="features-img mb-4">
+                                <img src="images/icons/core.png" alt="">
+                            </div>
+                            <h4 class="mb-2">Based on Bootstrap UI</h4>
+                            <p class="text-muted">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
+                        </div>
+                    </div>
+                    <!-- end col -->
+                    <div class="col-lg-4">
+                        <div class="features-box">
+                            <div class="features-img mb-4">
+                                <img src="images/icons/paperdesk.png" alt="">
+                            </div>
+                            <h4 class="mb-2">Creative Design</h4>
+                            <p class="text-muted">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+                        </div>
+                    </div>
+                    <!-- end col -->
+                </div>
+                <!-- end row -->
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-4">
+                        <div class="features-box">
+                            <div class="features-img mb-4">
+                                <img src="images/icons/solarsystem.png" alt="">
+                            </div>
+                            <h4 class="mb-3">Awesome Support</h4>
+                            <p class="text-muted">At solmen va esser necessi far uniform grammatica pronun e plu sommun paroles.</p>
+                        </div>
+                    </div>
+                    <!-- end col -->
+                    <div class="col-lg-4">
+                        <div class="features-box">
+                            <div class="features-img mb-4">
+                                <img src="images/icons/datatext.png" alt="">
+                            </div>
+                            <h4 class="mb-3">Easy to customize</h4>
+                            <p class="text-muted">If several languages coalesce the grammar of the is more simple languages.</p>
+                        </div>
+                    </div>
+                    <!-- end col -->
+                    <div class="col-lg-4">
+                        <div class="features-box">
+                            <div class="features-img mb-4">
+                                <img src="images/icons/browserscript.png" alt="">
+                            </div>
+                            <h4 class="mb-3">Quality Code</h4>
+                            <p class="text-muted">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+                        </div>
+                    </div>
+                    <!-- end col -->
+                </div> <!-- end row -->
+            </div> <!-- end container-fluid -->
+        </section>
+        <!-- features end -->
+
+        <!-- available demos start -->
+        <section class="section bg-light" id="demo">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="title text-center mb-3">
+                            <h3>Available Demos</h3>
+                            <p class="text-muted">At solmen va esser necessi far uniform grammatica.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end row -->
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="demo-box bg-white mt-4 p-2">
+                            <a href="#" class="text-dark">
+                                <img src="images/demo/index_1.jpg" alt="" class="img-fluid mx-auto d-block">
+                                <div class="p-3 text-center">
+                                    <h5 class="mb-0">light Layouts</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- end col -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="demo-box bg-white mt-4 p-2">
+                            <a href="#" class="text-dark">
+                                <img src="images/demo/index_2.jpg" alt="" class="img-fluid mx-auto d-block">
+                                <div class="p-3 text-center">
+                                    <h5 class="mb-0">Dark Layouts</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- end col -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="demo-box bg-white mt-4 p-2">
+                            <a href="#" class="text-dark">
+                                <img src="images/demo/index_3.jpg" alt="" class="img-fluid mx-auto d-block">
+                                <div class="p-3 text-center">
+                                    <h5 class="mb-0">Material Design </h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- end col -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="demo-box bg-white mt-4 p-2">
+                            <a href="#" class="text-dark">
+                                <img src="images/demo/index_4.jpg" alt="" class="img-fluid mx-auto d-block">
+                                <div class="p-3 text-center">
+                                    <h5 class="mb-0">Purple Layouts</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- end col -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="demo-box bg-white mt-4 p-2">
+                            <a href="#" class="text-dark">
+                                <img src="images/demo/index_5.jpg" alt="" class="img-fluid mx-auto d-block">
+                                <div class="p-3 text-center">
+                                    <h5 class="mb-0">Boxed Layouts</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- end col -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="demo-box bg-white mt-4 p-2">
+                            <a href="#" class="text-dark">
+                                <img src="images/demo/index_6.jpg" alt="" class="img-fluid mx-auto d-block">
+                                <div class="p-3 text-center">
+                                    <h5 class="mb-0">Horizontal </h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- end col -->
+                </div>
+                <!-- end row -->
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="text-center mt-4">
+                            <button class="btn btn-info navbar-btn">More Demos <i class="mdi mdi-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- end row -->
+            </div> <!-- end container-fluid -->
+        </section>
+        <!-- available demos end -->
+
+        <!-- features start -->
+        <section class="section">
+            <div class="container-fluid">
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="text-center mb-4 pb-1">
+                            <h3>Ultra Features</h3>
+                            <p class="text-muted">The clean and well commented code allows easy customization of the theme.It's designed for describing your app, agency or business.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end row -->
+
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="feature-img">
+                            <img src="images/features-img/img-2.png" alt="" class="img-fluid mx-auto d-block">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="p-5 features-content">
+                            <div class="features-icon mb-4">
+                                <i class="mdi mdi-chart-bar h4 text-white text-center"></i>
+                            </div>
+                            <h3 class="mb-3">It's designed for describing your app, agency or business</h3>
+                            <p class="text-muted mb-4">
+                                If several languages coalesce the grammar of the resulting language is more simple and regular than that of the individual languages.
+                            </p>
+                            <a href="#" class="btn btn-primary btn-sm">Learn More <i class="mdi mdi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- end row -->
+
+                <div class="row align-items-center mt-5">
+                    <div class="col-lg-6">
+                        <div class="p-5 features-content">
+                            <div class="features-icon mb-4">
+                                <i class="mdi mdi-auto-fix h4 text-white text-center"></i>
+                            </div>
+                            <h3 class="mb-3">Explore the new world of creativity</h3>
+                            <p class="text-muted mb-4">
+                                Everyone realizes why a new common language would be desirable one could refuse to expensive translators it would be necessary.
+                            </p>
+                            <a href="#" class="btn btn-primary btn-sm">Learn More <i class="mdi mdi-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="feature-img">
+                            <img src="images/features-img/img-1.png" alt="" class="img-fluid mx-auto d-block">
+                        </div>
+                    </div>
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container-fluid -->
+        </section>
+        <!-- features end -->
+
+        <!-- pricing start -->
+        <section class="section pb-0 bg-gradient" id="pricing">
+            <div class="bg-shape">
+                <img src="images/bg-shape.png" alt="" class="img-fluid mx-auto d-block">
+            </div>
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="text-center mb-4">
+                            <h3 class="text-white">Choose Our Pricing Plans</h3>
+                            <p class="text-white-50">The clean and well commented code allows easy customization of the theme.It's designed for describing your app, agency or business.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end row -->
+
+                <div class="row justify-content-center">
+                    <div class="col-xl-10">
+                        <div class="row align-items-center">
+                            <div class="col-lg-4">
+                                <div class="pricing-plan bg-white p-4 mt-4">
+                                    <div class="pricing-header text-center">
+                                        <h5 class="plan-title text-uppercase mb-4">Single Application</h5>
+                                        <h1><sup><small>$</small></sup>24</h1>
+                                        <div class="plan-duration text-muted">Per License</div>
+                                    </div>
+                                    <ul class="list-unstyled pricing-list mt-4">
+                                        <li>
+                                            <i class="mdi mdi-album"></i>
+                                            <p>Number of end products <b>1</b></p>
+                                        </li>
+                                        <li>
+                                            <i class="mdi mdi-lifebuoy"></i>
+                                            <p>Customer support<p>
+                                        </li>
+                                        <li>
+                                            <i class="mdi mdi-update"></i>
+                                            <p>Free Updates</p>
+                                        </li>
+                                        <li>
+                                            <i class="mdi mdi-earth"></i>
+                                            <p> 1 Domain<p>
+                                        </li>
+                                        <li>
+                                            <i class="mdi mdi-history"></i>
+                                            <p>Monthly updates</p>
+                                        </li>
+                                        <li>
+                                            <i class="mdi mdi-alarm-check"></i>
+                                            <p>24x7 Support</p>
+                                        </li>
+                                    </ul>
+                                    <div class="text-center mt-5">
+                                        <a href="#" class="btn btn-primary">Purchase Now</a>
+                                    </div>
+                                </div>
+                            </div> <!-- end col -->
+
+                            <div class="col-lg-4">
+                                <div class="pricing-plan active p-4 mt-4">
+                                    <span class="lable">Popular</span>
+                                    <div class="pricing-header text-white text-center">
+                                        <h5 class="plan-title text-white text-uppercase mb-4">Multiple Application</h5>
+                                        <h1 class=" text-white"><sup><small>$</small></sup>120</h1>
+                                        <div class="plan-duration">Per License</div>
+                                    </div>
+                                    <ul class="list-unstyled text-white pricing-list mt-4">
+                                        <li>
+                                            <i class="mdi mdi-album"></i>
+                                            <p>Number of end products <b>1</b></p>
+                                        </li>
+                                        <li>
+                                            <i class="mdi mdi-lifebuoy"></i>
+                                            <p>Customer support<p>
+                                        </li>
+                                        <li>
+                                            <i class="mdi mdi-update"></i>
+                                            <p>Free Updates</p>
+                                        </li>
+                                        <li>
+                                            <i class="mdi mdi-earth"></i>
+                                            <p> 1 Domain<p>
+                                        </li>
+                                        <li>
+                                            <i class="mdi mdi-history"></i>
+                                            <p>Monthly updates</p>
+                                        </li>
+                                        <li>
+                                            <i class="mdi mdi-alarm-check"></i>
+                                            <p>24x7 Support</p>
+                                        </li>
+                                    </ul>
+                                    <div class="text-center mt-5">
+                                        <a href="#" class="btn shadow btn-light">Purchase Now</a>
+                                    </div>
+                                </div>
+                            </div> <!-- end col -->
+
+                            <div class="col-lg-4">
+                                <div class="pricing-plan bg-white p-4 mt-4">
+                                    <div class="pricing-header text-center">
+                                        <h5 class="plan-title text-uppercase mb-4">Extended</h5>
+                                        <h1><sup><small>$</small></sup>999</h1>
+                                        <div class="plan-duration text-muted">Per License</div>
+                                    </div>
+                                    <ul class="list-unstyled pricing-list mt-4">
+                                        <li>
+                                            <i class="mdi mdi-album"></i>
+                                            <p>Number of end products <b>1</b></p>
+                                        </li>
+                                        <li>
+                                            <i class="mdi mdi-lifebuoy"></i>
+                                            <p>Customer support<p>
+                                        </li>
+                                        <li>
+                                            <i class="mdi mdi-update"></i>
+                                            <p>Free Updates</p>
+                                        </li>
+                                        <li>
+                                            <i class="mdi mdi-earth"></i>
+                                            <p> 1 Domain<p>
+                                        </li>
+                                        <li>
+                                            <i class="mdi mdi-history"></i>
+                                            <p>Monthly updates</p>
+                                        </li>
+                                        <li>
+                                            <i class="mdi mdi-alarm-check"></i>
+                                            <p>24x7 Support</p>
+                                        </li>
+                                    </ul>
+                                    <div class="text-center mt-5">
+                                        <a href="#" class="btn btn-primary">Purchase Now</a>
+                                    </div>
+                                </div>
+                            </div> <!-- end col -->
+                        </div>
+                        <!-- end row -->
+                    </div> <!-- end col-xl-10 -->
+
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container-fluid -->
+        </section>
+        <!-- pricing end -->
+
+        <!-- faqs start -->
+        <section class="section" id="faq">
+            <div class="container-fluid">
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="text-center mb-5">
+                            <h3>Frequently Asked Questions</h3>
+                            <p class="text-muted">At solmen va esser necessi far uniform grammatica.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end row -->
+
+                <div class="row">
+                    <div class="col-lg-5 offset-lg-1">
+                        <!-- Question/Answer -->
+                        <div>
+                            <div class="faq-question-q-box">Q.</div>
+                            <h4 class="faq-question">What is Lorem Ipsum?</h4>
+                            <p class="faq-answer mb-4 pb-1 text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                        </div>
+
+                        <!-- Question/Answer -->
+                        <div>
+                            <div class="faq-question-q-box">Q.</div>
+                            <h4 class="faq-question">Why use Lorem Ipsum?</h4>
+                            <p class="faq-answer mb-4 pb-1 text-muted">Lorem ipsum dolor sit amet, in mea nonumes dissentias dissentiunt, pro te solet oratio iriure. Cu sit consetetur moderatius intellegam, ius decore accusamus te. Ne primis suavitate disputando nam. Mutat convenirete.</p>
+                        </div>
+
+                        <!-- Question/Answer -->
+                        <div>
+                            <div class="faq-question-q-box">Q.</div>
+                            <h4 class="faq-question">How many variations exist?</h4>
+                            <p class="faq-answer mb-4 pb-1 text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                        </div>
+
+                    </div>
+                    <!--/col-lg-5 -->
+
+                    <div class="col-lg-5">
+                        <!-- Question/Answer -->
+                        <div>
+                            <div class="faq-question-q-box">Q.</div>
+                            <h4 class="faq-question">Is safe use Lorem Ipsum?</h4>
+                            <p class="faq-answer mb-4 pb-1 text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                        </div>
+
+                        <!-- Question/Answer -->
+                        <div>
+                            <div class="faq-question-q-box">Q.</div>
+                            <h4 class="faq-question">When can be used?</h4>
+                            <p class="faq-answer mb-4 pb-1 text-muted">Lorem ipsum dolor sit amet, in mea nonumes dissentias dissentiunt, pro te solet oratio iriure. Cu sit consetetur moderatius intellegam, ius decore accusamus te. Ne primis suavitate disputando nam. Mutat convenirete.</p>
+                        </div>
+
+                        <!-- Question/Answer -->
+                        <div>
+                            <div class="faq-question-q-box">Q.</div>
+                            <h4 class="faq-question">License &amp; Copyright</h4>
+                            <p class="faq-answer mb-4 pb-1 text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                        </div>
+
+                    </div>
+                    <!--/col-lg-5-->
+                </div>
+                <!-- end row -->
+
+            </div> <!-- end container-fluid -->
+        </section>
+        <!-- faqs end -->
+
+        <!-- testimonial start -->
+        <section class="section bg-light" id="clients">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="text-center mb-4">
+                            <h3>What our Users Says</h3>
+                            <p class="text-muted">The clean and well commented code allows easy customization of the theme.It's designed for describing your app, agency or business.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end row -->
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="testi-box mt-4">
+                            <div class="testi-desc bg-white p-4">
+                                <p class="text-muted mb-0">" Excellent support for a tricky issue related to our customization of the template. Author kept us updated as he made progress on the issue and emailed us a patch when he was done. "</p>
+                            </div>
+                            <div class="p-4">
+                                <div class="testi-img float-left mr-2">
+                                    <img src="images/testi/img-2.png" alt="" class="rounded-circle">
+                                </div>
+                                <div>
+                                    <h5 class="mb-0">Michael Morrell</h5>
+                                    <p class="text-muted m-0"><small>- Ubold User</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col -->
+                    <div class="col-lg-4">
+                        <div class="testi-box mt-4">
+                            <div class="testi-desc bg-white p-4">
+                                <p class="text-muted mb-0">" Flexible, Everything is in, Suuuuuper light, even for the code is much easier to cut and make it a theme for a productive app. "</p>
+                            </div>
+                            <div class="p-4">
+                                <div class="testi-img float-left mr-2">
+                                    <img src="images/testi/img-1.png" alt="" class="rounded-circle">
+                                </div>
+                                <div>
+                                    <h5 class="mb-0">John Seidel</h5>
+                                    <p class="text-muted m-0"><small>- Ubold User</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col -->
+                    <div class="col-lg-4">
+                        <div class="testi-box mt-4">
+                            <div class="testi-desc bg-white p-4">
+                                <p class="text-muted mb-0">" Not only the code, design and support are awesome, but they also update it constantly the template with new content, new plugins. I will buy surely another coderthemes template! "</p>
+                            </div>
+                            <div class="p-4">
+                                <div class="testi-img float-left mr-2">
+                                    <img src="images/testi/img-3.png" alt="" class="rounded-circle">
+                                </div>
+                                <div>
+                                    <h5 class="mb-0">Robert Taylor</h5>
+                                    <p class="text-muted m-0"><small>- Ubold User</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col -->
+                </div> 
+                <!-- end row -->
+            </div> 
+            <!-- end container-fluid -->
+        </section>
+        <!-- testimonial end -->
+
+        <!-- contact start -->
+        <section class="section pb-0 bg-gradient" id="contact">
+            <div class="bg-shape">
+                <img src="images/bg-shape-light.png" alt="" class="img-fluid mx-auto d-block">
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="title text-center mb-4">
+                            <h3 class="text-white">Have any Questions ?</h3>
+                            <p class="text-white-50">Please fill out the following form and we will get back to you shortly</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end row -->
+                <div class="row mb-4">
+                    <div class="col-lg-4">
+                        <div class="contact-content text-center mt-4">
+                            <div class="contact-icon mb-2">
+                                <i class="mdi mdi-email-outline text-info h2"></i>
+                            </div>
+                            <div class="contact-details text-white">
+                                <h5 class="text-white">E-mail</h5>
+                                <p class="text-white-50">example@abc.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col -->
+                    <div class="col-lg-4">
+                        <div class="contact-content text-center mt-4">
+                            <div class="contact-icon mb-2">
+                                <i class="mdi mdi-cellphone-iphone text-info h2"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5 class="text-white">Phone</h5>
+                                <p class="text-white-50">012-345-6789</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col -->
+                    <div class="col-lg-4">
+                        <div class="contact-content text-center mt-4">
+                            <div class="contact-icon mb-2">
+                                <i class="mdi mdi-map-marker text-info h2"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5 class="text-white">Address</h5>
+                                <p class="text-white-50">4413 Redbud Drive, New York</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col -->
+                </div>
+                <!-- end row -->
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+
+                        <div class="custom-form p-5 bg-white">
+                            <div id="message"></div>
+                            <form method="post" action="https://appl.demoo.id/tema/UBold/Landing/php/contact.php" name="contact-form" id="contact-form">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="name">Name</label>
+                                            <input name="name" id="name" type="text" class="form-control" placeholder="Enter your name...">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="email">Email address</label>
+                                            <input name="email" id="email" type="email" class="form-control" placeholder="Enter your email...">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end row -->
+
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label for="subject">Subject</label>
+                                            <input name="subject" id="subject" type="text" class="form-control" placeholder="Enter Subject...">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end row -->
+
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label for="comments">Message</label>
+                                            <textarea name="comments" id="comments" rows="4" class="form-control" placeholder="Enter your message..."></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end row -->
+
+                                <div class="row">
+                                    <div class="col-lg-12 text-right">
+                                        <input type="submit" id="submit" name="send" class="submitBnt btn btn-danger" value="Send Message">
+                                        <div id="simple-msg"></div>
+                                    </div>
+                                </div>
+                                <!-- end row -->
+                            </form>
+                        </div>
+                        <!-- end custom-form -->
+                    </div>
+                    <!-- end col -->
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container-fluid -->
+        </section>
+        <!-- contact end -->
+
+        <!-- cta start -->
+        <section class="section-sm bg-light">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-md-9">
+                        <h3 class="mb-0 mo-mb-20">We also customize the theme as per your needs</h3>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="text-md-right">
+                            <a href="#" class="btn btn-outline-dark btn-rounded"><i class="mdi mdi-email-outline mr-1"></i> Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container-fluid -->
+        </section>
+        <!-- cta end -->
+
+        <!-- footer start -->
+        <footer class="bg-dark footer">
+            <div class="container-fluid">
+                <div class="row mb-5">
+                    <div class="col-lg-4">
+                        <div class="pr-lg-4">
+                            <div class="mb-4">
+                                <img src="images/logo-light.png" alt="" height="20">
+                            </div>
+                            <p class="text-white-50">A Responsive Bootstrap 4 Web App Kit</p>
+                            <p class="text-white-50">Ubold is a fully featured premium admin template built on top of awesome Bootstrap 4.1.3, modern web technology HTML5, CSS3 and jQuery.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-2">
+                        <div class="footer-list">
+                            <p class="text-white mb-2 footer-list-title">About</p>
+                            <ul class="list-unstyled">
+                                <li><a href="#"><i class="mdi mdi-chevron-right mr-2"></i>Home</a></li>
+                                <li><a href="#"><i class="mdi mdi-chevron-right mr-2"></i>Features</a></li>
+                                <li><a href="#"><i class="mdi mdi-chevron-right mr-2"></i>Faq</a></li>
+                                <li><a href="#"><i class="mdi mdi-chevron-right mr-2"></i>Clients</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <div class="footer-list">
+                            <p class="text-white mb-2 footer-list-title">Social</p>
+                            <ul class="list-unstyled">
+                                <li><a href="#"><i class="mdi mdi-chevron-right mr-2"></i>Facebook </a></li>
+                                <li><a href="#"><i class="mdi mdi-chevron-right mr-2"></i>Twitter</a></li>
+                                <li><a href="#"><i class="mdi mdi-chevron-right mr-2"></i>Behance</a></li>
+                                <li><a href="#"><i class="mdi mdi-chevron-right mr-2"></i>Dribble</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <div class="footer-list">
+                            <p class="text-white mb-2 footer-list-title">Support</p>
+                            <ul class="list-unstyled">
+                                <li><a href="#"><i class="mdi mdi-chevron-right mr-2"></i>Help & Support</a></li>
+                                <li><a href="#"><i class="mdi mdi-chevron-right mr-2"></i>Privacy Policy</a></li>
+                                <li><a href="#"><i class="mdi mdi-chevron-right mr-2"></i>Terms & Conditions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-2">
+                        <div class="footer-list">
+                            <p class="text-white mb-2 footer-list-title">More Info</p>
+                            <ul class="list-unstyled">
+                                <li><a href="#"><i class="mdi mdi-chevron-right mr-2"></i>Pricing</a></li>
+                                <li><a href="#"><i class="mdi mdi-chevron-right mr-2"></i>For Marketing</a></li>
+                                <li><a href="#"><i class="mdi mdi-chevron-right mr-2"></i>For Agencies</a></li>
+                                <li><a href="#"><i class="mdi mdi-chevron-right mr-2"></i>Our Apps</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- end row -->
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="float-left pull-none">
+                            <p class="text-white-50">2019 © Ubold. Design by <a href="https://coderthemes.com/" target="_blank" class="text-white-50">Coderthemes</a> </p>
+                        </div>
+                        <div class="float-right pull-none">
+                            <ul class="list-inline social-links">
+                                <li class="list-inline-item text-white-50">
+                                    Social :
+                                </li>
+                                <li class="list-inline-item"><a href="#"><i class="mdi mdi-facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="mdi mdi-twitter"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="mdi mdi-instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="mdi mdi-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end col -->
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- container-fluid -->
+        </footer>
+        <!-- footer end -->
+        
+        <!-- Back to top -->    
+        <a href="#" class="back-to-top" id="back-to-top"> <i class="mdi mdi-chevron-up"> </i> </a>
+
+        <!-- javascript -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/jquery.easing.min.js"></script>
+        <script src="js/scrollspy.min.js"></script>
+
+        <!-- custom js -->
+        <script src="js/app.js"></script>
+    </body>
+
+
+<!-- Mirrored from appl.demoo.id/tema/UBold/Landing/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 29 Jan 2021 12:50:35 GMT -->
+</html>
