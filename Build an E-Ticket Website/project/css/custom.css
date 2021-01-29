@@ -1,5 +1,7 @@
-.nav-item-product
+.products:hover {
+    cursor: pointer;
+}
 
 .pricing-dropdown {
-    display: none;
+    
 }
