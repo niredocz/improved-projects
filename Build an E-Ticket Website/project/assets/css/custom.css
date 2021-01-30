@@ -43,3 +43,29 @@ a.sub-nav-link:hover {
 .demo-box .text-dark img {
     height: 180px;
 }
+
+.ratings {
+    background-color: #ebebeb;
+    padding: 15px 10px;
+    color: black;
+    border-radius: 5px;
+    padding-bottom: 20px;
+}
+
+.checked {
+    color: coral;
+}
+.product-btn {
+    padding: .8rem 8rem;
+    margin: 0 auto;
+    font-weight: 600;
+}
+
+.ratings ul {
+    list-style-type: none;
+}
+
+.ratings ul li {
+    margin: 10px 0;
+    font-weight: 600;
+}
