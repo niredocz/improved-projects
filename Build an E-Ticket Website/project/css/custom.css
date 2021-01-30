@@ -37,6 +37,7 @@ a.sub-nav-link:hover {
 
 .demo-box {
     height: 300px;
+    background-color: #ebebeb!important;
 }
 
 .demo-box .text-dark img {
