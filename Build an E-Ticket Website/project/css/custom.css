@@ -2,6 +2,43 @@
     cursor: pointer;
 }
 
-.pricing-dropdown {
-    
+.pricing-dropdown{
+    display: none;
+    margin-top: 15px;
+    list-style: none;
+    padding: 6px 0;
+    background-color: rgba(255, 255, 255, .6);
+    border-radius: 5px;
+}
+.pricing-dropdown li {
+    padding: 6px 0;
+}
+a.sub-nav-link {
+    line-height: 26px;
+    color: rgba(29, 18, 18, 0.6);
+    /* color: rgba(255, 255, 255, 0.6); */
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    background-color: transparent !important;
+    padding: 6px 10px;
+    margin: 0px 10px;
+    font-weight: 600;
+}
+
+a.sub-nav-link:hover {
+    color: #ffffff;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.clients .client-images img {
+    height: 100px;
+}
+
+.demo-box {
+    height: 300px;
+}
+
+.demo-box .text-dark img {
+    height: 180px;
 }
