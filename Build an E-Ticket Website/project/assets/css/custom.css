@@ -109,6 +109,10 @@ hr.divider {
     width: 200px;
 }
 
+.btn-invoice {
+    width: 200px;
+}
+
 .address-marker {
     color: #673ab7;
     font-size: 28px;
