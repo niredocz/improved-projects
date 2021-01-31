@@ -2,6 +2,14 @@
     cursor: pointer;
 }
 
+.bg-products {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    border-style: none;
+    /* bottom: 0; */
+}
+
 .pricing-dropdown{
     display: none;
     margin-top: 15px;
