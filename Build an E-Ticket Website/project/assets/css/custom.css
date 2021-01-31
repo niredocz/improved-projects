@@ -61,6 +61,10 @@ a.sub-nav-link:hover {
     font-weight: 600;
 }
 
+.product-detail p {
+    text-align: justify;
+}
+
 .ratings ul {
     list-style-type: none;
 }
@@ -68,4 +72,105 @@ a.sub-nav-link:hover {
 .ratings ul li {
     margin: 10px 0;
     font-weight: 600;
+}
+
+.product-img {
+    height: 100px;
+}
+
+.checkout-delete i {
+    padding: 0 0;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+#quantity {
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    transform: none;
+}
+
+hr.divider {
+    border: .5px solid #673ab7;
+}
+
+.checkout-payment h4 {
+    margin: 0 0 ;
+}
+
+.checkout-payment h5 {
+    margin: 2px 0;
+}
+
+.btn-payment {
+    position: absolute;
+    right: 50px;
+    width: 200px;
+}
+
+.address-marker {
+    color: #673ab7;
+    font-size: 28px;
+}
+
+.ticket-marker {
+    color: #673ab7;
+    font-size: 24px;
+}
+
+.confirm:checked::after {
+    background: wheat;
+    content: '';
+    display: block;
+    position: relative;
+    z-index: 100;
+}
+
+.confirm {
+    appearance: none;
+    position: relative;
+    margin: 7px auto;
+    height: 25px;
+    width: 25px;
+    transition: all .15s ease-out 0s;
+    background: #673ab7;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    outline: none;
+    position: relative;
+    z-index: 1000;
+}
+
+.confirm:checked::before {
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    content: '✓';
+    display: inline-block;
+    font-size: 14px;
+    text-align: center;
+    line-height: 25px;
+}
+
+.payment-method {
+    border: 1px solid grey;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 5px;
+    cursor: pointer;
+}
+
+.payment-method img {
+    /* width: 100px; */
+    height: 50px;
+    width: auto;
+}
+
+.selected {
+    -webkit-transition: all 0.3s;
+    transition: all .3s;
+    background: rgba(0,122,255,.1);
 }
