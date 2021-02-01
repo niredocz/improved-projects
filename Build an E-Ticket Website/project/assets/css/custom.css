@@ -3,11 +3,27 @@
 }
 
 .bg-products {
-    position: absolute;
+    position: relative;
     left: 0;
     width: 100%;
     border-style: none;
     /* bottom: 0; */
+}
+
+.title-wrapper {
+    position: absolute;
+    width: 1000px;
+    background: transparent;
+    top: 220px;
+    left: 120px;
+    z-index: 120;
+}
+
+.product-title {
+    height: 100px;
+    margin-top: 20px;
+    padding-top: 20px;
+    background-color: rgba(255, 255, 255, .5);
 }
 
 .pricing-dropdown{
