@@ -10,6 +10,14 @@
     /* bottom: 0; */
 }
 
+.bg-purple {
+    background: #673ab7;
+}
+
+.bg-purple h2 {
+    color: white;
+}
+
 .title-wrapper {
     position: absolute;
     width: 1000px;
@@ -201,4 +209,30 @@ hr.divider {
     -webkit-transition: all 0.3s;
     transition: all .3s;
     background: rgba(0,122,255,.1);
+}
+
+.card-detail {
+    height: 450px;
+}
+
+.card-detail p {
+    height: 100px;
+}
+
+.card-detail img {
+    height: 250px;
+}
+
+.product-link span {
+    font-size: 24px;
+}
+
+.product-link a:hover {
+    color: #e7e7e7;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.product-link a {
+    color: white;
 }
