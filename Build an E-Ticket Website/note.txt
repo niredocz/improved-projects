@@ -1,0 +1,10 @@
+interface backend
+dashboard backend pake chart grafik dan dll.
+https://appl.demoo.id/tema/frest-admin-v1.0/frest-admin/html/ltr/vertical-menu-boxicons-template/index.html
+harus unik sesuai desain project ticketarena
+
+catatan non-program
+70% kantor
+25% karyawan
+5% lainnya
+
