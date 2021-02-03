@@ -462,6 +462,8 @@ body[data-layout="horizontal"] .footer {
   position: absolute;
   width: 70px !important;
   z-index: 5;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .vertical-collpsed .vertical-menu .simplebar-content-wrapper,
 .vertical-collpsed .vertical-menu .simplebar-mask {
