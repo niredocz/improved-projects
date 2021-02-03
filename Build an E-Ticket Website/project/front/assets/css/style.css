@@ -101,8 +101,9 @@ p {
 .bg-gradient {
   /* background: -webkit-gradient(linear, right top, left top, from(#673ab7), to(#3e1e8c));
   background: linear-gradient(to left, #673ab7, #3e1e8c); */
-  background: -webkit-gradient(linear, right top, left top, from(#c0392b), to( #673ab7));
-  background: linear-gradient(to left, #673ab7,#c0392b);
+  /* background: -webkit-gradient(linear, right top, left top, from(#c0392b), to( #673ab7)); */
+  background: -webkit-gradient(linear, right top, left top, from(#0abde3), to(#2e86de));
+  /* background: linear-gradient(to left, #673ab7,#c0392b); */
 }
 
 /**BACK TO TOP**/

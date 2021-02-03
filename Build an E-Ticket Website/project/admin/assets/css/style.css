@@ -1,0 +1,33 @@
+body {
+  /* from(#c0392b), */
+  background: -webkit-gradient(
+    linear,
+    right top,
+    left top,
+    from(#0abde3),
+    to(#2e86de)
+  );
+  /* background: linear-gradient(to left, #673ab7, #c0392b); */
+  /* background: linear-gradient(to left, #673ab7, #ff6b6b); */
+}
+
+.search-bar {
+  width: 30rem;
+}
+
+.vertical-logo {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  display: inline-block;
+  color: #fff !important;
+  content: "/";
+}
+
+.user-info {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
