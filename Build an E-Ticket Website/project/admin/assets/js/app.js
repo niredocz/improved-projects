@@ -74,13 +74,7 @@
         s(this).parent().parent().prev().addClass("mm-active"),
         s(this).parent().parent().parent().addClass("mm-active"),
         s(this).parent().parent().parent().parent().addClass("mm-show"),
-        s(this)
-          .parent()
-          .parent()
-          .parent()
-          .parent()
-          .parent()
-          .addClass("mm-active"));
+        s(this).parent().parent().parent().parent().parent().addClass("mm-active"));
     }),
     s(document).ready(function () {
       var e;

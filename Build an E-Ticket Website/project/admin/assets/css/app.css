@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&amp;display=swap);
+
 #page-topbar {
   position: fixed;
   top: 0;
@@ -9,6 +10,7 @@
   -webkit-box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03);
   box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03);
 }
+
 .navbar-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -23,6 +25,7 @@
   height: 70px;
   padding: 0 calc(24px / 2) 0 0;
 }
+
 .navbar-header .dropdown.show .header-item {
   background-color: #f8f9fa;
 }
